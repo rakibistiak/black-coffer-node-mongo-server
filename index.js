@@ -21,7 +21,7 @@ async function run() {
       
       const database = client.db("BlackCoffer_Assignment");
       const serviceCollection = database.collection("service_Info");
-      // Get All Service to display on the UI
+      // Get All Service to display on UI
       app.get('/services', async(req,res)=>{
         const result = await serviceCollection.find({}).toArray();
         res.json(result)
